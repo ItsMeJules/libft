@@ -10,6 +10,7 @@ STR_SRCS_PATH	= string
 MEM_SRCS_PATH	= memory
 CHAR_SRCS_PATH	= char
 FD_SRCS_PATH	= fd
+BONUS_SRCS_PATH	= bonus
 SRCS_PATH		= srcs
 INCS_PATH		= includes
 
@@ -31,6 +32,7 @@ STR_SRCS_NAME	= $(addprefix $(STR_SRCS_PATH)/, ft_strcpy.c \
 					ft_striter.c \
 					ft_striteri.c \
 					ft_strmap.c \
+					ft_strmapi.c \
 					ft_strcat.c \
 					ft_strjoin.c \
 					ft_strlcpy.c \
@@ -60,6 +62,15 @@ FD_SRCS_NAME	= $(addprefix $(FD_SRCS_PATH)/, ft_putchar_fd.c \
 					 ft_putstr_fd.c \
 					 ft_putendl_fd.c \
 					 ft_putnbr_fd.c)
+BONUS_SRCS_NAME	= $(addprefix $(BONUS_SRCS_PATH)/, ft_lstnew.c \
+					ft_lstadd_front.c \
+					ft_lstsize.c \
+					ft_lstlast.c \
+					ft_lstadd_back.c \
+					ft_lstdelone.c \
+					ft_lstclear.c \
+					ft_lstiter.c \
+					ft_lstmap.c)
 INCS_NAME		= libft.h
 
 INCS			= $(addprefix $(INCS_PATH)/, $(INCS_NAME))
@@ -67,7 +78,10 @@ SRCS			= $(addprefix $(SRCS_PATH)/, $(STR_SRCS_NAME) \
 					$(MEM_SRCS_NAME) \
 					$(CHAR_SRCS_NAME) \
 					$(FD_SRCS_NAME))
+BONUS			= $(addprefix $(SRCS_PATH)/, $(BONUS_SRCS_NAME))
+
 OBJS			= $(SRCS:.c=.o)
+BONUS_OBJS		= $(BONUS:.c=.o)
 
 all				: $(NAME)
 
@@ -77,8 +91,11 @@ $(NAME)			: $(OBJS)
 %.o				: %.c
 				$(CC) $(CFLAGS) $(IFLAGS) -o $@ -c $<
 
+bonus			: $(OBJS) $(BONUS_OBJS)
+				$(AR) $(ARFLAGS) $(NAME) $^
+
 clean			: 
-				$(RM) $(OBJS) $(INCS:.h=.h.gch)
+				$(RM) $(OBJS) $(BONUS_OBJS) $(INCS:.h=.h.gch)
 
 fclean			: clean
 				$(RM) $(NAME)
