@@ -15,6 +15,8 @@ char		*ft_strtrim(char const *s, char const *set)
 	size_t	begin;
 	size_t	end;
 		
+	if (!s || !set)
+		return (NULL);
 	begin = 0;
 	while (s[begin] && is_trimmable(s[begin], set))
 		begin++;
