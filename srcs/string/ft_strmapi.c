@@ -7,7 +7,7 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	int		i;
 
 	str = (char*)s;
-	if (!(new = ft_strnew(ft_strlen(str) - 1)))
+	if (!(new = ft_strnew(ft_strlen(str))))
 		return (NULL);
 	i = 0;
 	while (*str)

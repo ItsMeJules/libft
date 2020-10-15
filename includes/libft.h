@@ -22,7 +22,7 @@ int		ft_strnequ(const char *s1, const char *s2, size_t n);
 int		ft_strequ(const char *s1, const char *s2);
 char	*ft_substr(const char *s, unsigned int start, size_t len);
 char	*ft_strnew(size_t size);
-int		ft_strlen(const char *s);
+size_t	ft_strlen(const char *s);
 char	*ft_strcpy(char *dest, char *src);
 char	*ft_strtrim(const char *s, char const *se);
 char	*ft_strchr(const char *s, int c);
