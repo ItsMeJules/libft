@@ -4,8 +4,10 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	char	*cpy;
 
+	if (!s || len <= 0 || start >= ft_strlen(s))
+		return (NULL);
 	cpy = ft_strnew(len);
-	if (!cpy || !s)
+	if (!cpy)
 		return (NULL);
 	if (start >= ft_strlen(s))
 		return ("");
