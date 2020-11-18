@@ -6,7 +6,7 @@
 /*   By: jpeyron <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/18 16:12:33 by jpeyron           #+#    #+#             */
-/*   Updated: 2020/11/18 16:12:34 by jpeyron          ###   ########.fr       */
+/*   Updated: 2020/11/18 21:48:14 by jpeyron          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	char	*cpy;
 	size_t	i;
 
-	if (!s || start >= ft_strlen(s))
+	if (!s)
 		return (NULL);
 	i = 0;
 	s += start;
