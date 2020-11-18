@@ -6,7 +6,7 @@
 /*   By: jpeyron <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/18 16:12:28 by jpeyron           #+#    #+#             */
-/*   Updated: 2020/11/18 16:28:12 by jpeyron          ###   ########.fr       */
+/*   Updated: 2020/11/18 20:20:06 by jpeyron          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,5 +37,7 @@ char		*ft_strtrim(char const *s, char const *set)
 		end--;
 	if (end != 0)
 		end -= begin;
+	if (end <= begin)
+		return (ft_strnew(0));
 	return (ft_substr(s, begin, end));
 }

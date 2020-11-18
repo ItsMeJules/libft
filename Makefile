@@ -37,7 +37,10 @@ STR_SRCS_NAME	= $(addprefix $(STR_SRCS_PATH)/, ft_strcpy.c \
 					ft_strjoin.c \
 					ft_strlcpy.c \
 					ft_strndup.c \
-					ft_split.c)
+					ft_split.c \
+					ft_atoi.c \
+					ft_strlcat.c \
+					ft_itoa.c)
 MEM_SRCS_NAME	= $(addprefix $(MEM_SRCS_PATH)/, ft_bzero.c \
 					ft_memalloc.c \
 					ft_memccpy.c \

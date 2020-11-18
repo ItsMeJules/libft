@@ -6,7 +6,7 @@
 /*   By: jpeyron <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/18 15:52:47 by jpeyron           #+#    #+#             */
-/*   Updated: 2020/11/18 15:56:08 by jpeyron          ###   ########.fr       */
+/*   Updated: 2020/11/18 18:51:36 by jpeyron          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,9 @@ int				ft_memcmp(const void *s1, const void *s2, size_t n);
 void			*ft_memalloc(size_t size);
 void			ft_memdel(void **ap);
 void			*ft_calloc(size_t nmenb, size_t size);
+int				ft_atoi(const char *str);
+char			*ft_itoa(int n);
+size_t			ft_strlcat(char *dest, char *src, size_t size);
 char			*ft_strncpy(char *dest, char *src, size_t len);
 void			ft_strdel(char **as);
 char			*ft_strdup(const char *s);
