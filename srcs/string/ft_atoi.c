@@ -6,7 +6,7 @@
 /*   By: jpeyron <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/11 10:25:36 by jpeyron           #+#    #+#             */
-/*   Updated: 2020/11/18 18:49:50 by jpeyron          ###   ########.fr       */
+/*   Updated: 2020/11/18 21:40:57 by jpeyron          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,9 +21,9 @@ int		is_space(char c)
 
 int		ft_atoi(const char *str)
 {
-	int	nb;
-	int	i;
-	int	neg;
+	long	nb;
+	int		i;
+	int		neg;
 
 	nb = 0;
 	i = 0;
