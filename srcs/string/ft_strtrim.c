@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strtrim.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: jpeyron <marvin@42.fr>                     +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2020/11/18 16:12:28 by jpeyron           #+#    #+#             */
+/*   Updated: 2020/11/18 16:28:12 by jpeyron          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
 static int	is_trimmable(char c, char const *set)
@@ -14,7 +26,7 @@ char		*ft_strtrim(char const *s, char const *set)
 {
 	size_t	begin;
 	size_t	end;
-		
+
 	if (!s || !set)
 		return (NULL);
 	begin = 0;
