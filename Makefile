@@ -13,59 +13,45 @@ FD_SRCS_PATH	= fd
 BONUS_SRCS_PATH	= bonus
 SRCS_PATH		= srcs
 INCS_PATH		= includes
+INCS_NAME		= libft.h
 
-STR_SRCS_NAME	= $(addprefix $(STR_SRCS_PATH)/, ft_strcpy.c \
-					ft_strdel.c \
-					ft_strdup.c \
-					ft_strequ.c \
+INCS			= $(addprefix $(INCS_PATH)/, $(INCS_NAME))
+SRCS			= $(addprefix $(SRCS_PATH)/, ft_strdup.c \
 					ft_strlen.c \
-					ft_strncpy.c \
-					ft_strnequ.c \
-					ft_strnew.c \
 					ft_substr.c \
 					ft_strtrim.c \
 					ft_strchr.c \
 					ft_strrchr.c \
 					ft_strncmp.c \
 					ft_strnstr.c \
-					ft_strclr.c \
-					ft_striter.c \
-					ft_striteri.c \
-					ft_strmap.c \
 					ft_strmapi.c \
-					ft_strcat.c \
 					ft_strjoin.c \
 					ft_strlcpy.c \
-					ft_strndup.c \
 					ft_split.c \
 					ft_atoi.c \
 					ft_strlcat.c \
-					ft_itoa.c)
-MEM_SRCS_NAME	= $(addprefix $(MEM_SRCS_PATH)/, ft_bzero.c \
-					ft_memalloc.c \
+					ft_itoa.c \
+					ft_bzero.c \
 					ft_memccpy.c \
 					ft_memchr.c \
 					ft_memcmp.c \
 					ft_memcpy.c \
-					ft_memdel.c \
 					ft_memmove.c \
 					ft_memset.c \
-					ft_calloc.c)
-CHAR_SRCS_NAME	= $(addprefix $(CHAR_SRCS_PATH)/, ft_tolower.c \
+					ft_calloc.c \
+					ft_tolower.c \
 					ft_isdigit.c \
-					ft_islower.c \
-					ft_isupper.c \
 					ft_isalpha.c \
 					ft_isalnum.c \
 					ft_isascii.c \
 					ft_tolower.c \
 					ft_isprint.c \
-					ft_toupper.c)
-FD_SRCS_NAME	= $(addprefix $(FD_SRCS_PATH)/, ft_putchar_fd.c \
-					 ft_putstr_fd.c \
-					 ft_putendl_fd.c \
-					 ft_putnbr_fd.c)
-BONUS_SRCS_NAME	= $(addprefix $(BONUS_SRCS_PATH)/, ft_lstnew.c \
+					ft_toupper.c \
+					ft_putchar_fd.c \
+					ft_putstr_fd.c \
+					ft_putendl_fd.c \
+					ft_putnbr_fd.c)
+BONUS			= $(addprefix $(SRCS_PATH)/, ft_lstnew.c \
 					ft_lstadd_front.c \
 					ft_lstsize.c \
 					ft_lstlast.c \
@@ -74,14 +60,6 @@ BONUS_SRCS_NAME	= $(addprefix $(BONUS_SRCS_PATH)/, ft_lstnew.c \
 					ft_lstclear.c \
 					ft_lstiter.c \
 					ft_lstmap.c)
-INCS_NAME		= libft.h
-
-INCS			= $(addprefix $(INCS_PATH)/, $(INCS_NAME))
-SRCS			= $(addprefix $(SRCS_PATH)/, $(STR_SRCS_NAME) \
-					$(MEM_SRCS_NAME) \
-					$(CHAR_SRCS_NAME) \
-					$(FD_SRCS_NAME))
-BONUS			= $(addprefix $(SRCS_PATH)/, $(BONUS_SRCS_NAME))
 
 OBJS			= $(SRCS:.c=.o)
 BONUS_OBJS		= $(BONUS:.c=.o)
