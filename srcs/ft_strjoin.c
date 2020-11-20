@@ -6,7 +6,7 @@
 /*   By: jpeyron <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/18 16:11:17 by jpeyron           #+#    #+#             */
-/*   Updated: 2020/11/20 21:48:41 by jpeyron          ###   ########.fr       */
+/*   Updated: 2020/11/20 22:00:18 by jpeyron          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,7 @@ char		*ft_strjoin(char const *s1, char const *s2)
 
 	if (!(new = malloc((ft_strlen(s1) + ft_strlen(s2) + 1) * sizeof(char))))
 		return (NULL);
+	ft_bzero(new, (ft_strlen(s1) + ft_strlen(s2) + 1));
 	new = ft_strcat(ft_strcat(new, s1), s2);
 	return (new);
 }
