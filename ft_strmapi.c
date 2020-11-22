@@ -6,7 +6,7 @@
 /*   By: jpeyron <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/18 16:11:36 by jpeyron           #+#    #+#             */
-/*   Updated: 2020/11/19 20:17:27 by jpeyron          ###   ########.fr       */
+/*   Updated: 2020/11/22 15:56:21 by jpeyron          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,5 +27,6 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 		new[i] = f(i, *str++);
 		i++;
 	}
+	new[i] = 0;
 	return (new);
 }
